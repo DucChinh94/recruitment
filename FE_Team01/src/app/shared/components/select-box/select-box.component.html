@@ -1,0 +1,13 @@
+<div class="select">
+    <select class="select-hidden">
+      <option *ngFor="let option of data" [value]="option.key">{{option.value}}</option>
+    </select>
+  
+    <div class="select-styled">
+      {{selectedOption.value}}
+    </div>
+  
+    <ul class="select-options" >
+      <li (click)="select(option)" *ngFor="let option of data" >{{option.value}}</li>
+    </ul>
+  </div>

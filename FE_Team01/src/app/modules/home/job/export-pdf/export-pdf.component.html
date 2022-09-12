@@ -1,0 +1,115 @@
+<div id="htmlContent">
+    <div class="example-label" style="
+    font-size: 2.5rem; text-align: center;"><b style="
+font-size: 2.5rem; margin-top: 15px;">Thông tin công việc</b>
+    </div>
+    <div>
+        <div class="addname">
+            <div class="example-full-width">
+                <h2>Tên công việc</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.name}}</p>
+            </div>
+            <div class="example-full-width">
+                <h2>Vị trí công việc</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.jobPosition.code}}</p>
+
+            </div>
+            <div class="example-full-width">
+                <h2>Địa chỉ làm việc</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.addressWork}}</p>
+
+            </div>
+        </div>
+
+        <div class="addname">
+            <div class="example-full-width" appearance="fill" color="accent">
+                <h2>Số năm kinh nghiệm</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.numberExperience}}</p>
+            </div>
+            <div class="example-full-width" appearance="fill" color="accent">
+                <h2>Hình thức làm việc</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.workingForm.code}}</p>
+
+            </div>
+            <div class="example-full-width" appearance="fill" color="accent">
+                <h2>Trạng thái công việc</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.statusJob.description}}</p>
+
+            </div>
+
+        </div>
+        <div>
+            <div class="example-full-width-fix" appearance="fill" color="accent">
+                <h2>Mô tả công việc</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.description}}</p>
+            </div>
+        </div>
+
+        <div class="addname">
+
+            <div class="example-full-width" appearance="fill" color="accent">
+                <h2>Trình độ học vấn</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.academicLevel.description}}</p>
+
+            </div>
+            <div class="example-full-width" appearance="fill" color="accent">
+                <h2>Trình độ chuyên môn</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.rank.description}}</p>
+
+            </div>
+            <div class="example-full-width" appearance="fill" color="accent">
+                <h2>Ngày hết hạn</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.dueDate}}</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="example-full-width-fix" appearance="fill" color="accent">
+                <h2>Yêu cầu</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.jobRequirement}}</p>
+            </div>
+        </div>
+        <div class="addname">
+            <div class="example-full-width-fix" appearance="fill" color="accent">
+                <h2>Quyền lợi</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.benefits}}</p>
+            </div>
+
+        </div>
+        <div class="addname">
+            <div class="example-full-width-fix" appearance="fill" color="accent">
+                <h2>Kỹ năng</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.skills}}</p>
+            </div>
+
+        </div>
+
+        <div class="addname">
+            <div class="example-full-width" appearance="fill" color="accent">
+
+                <h2>Mức lương cao nhất</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.salaryMax}}</p>
+            </div>
+            <div class="example-full-width" appearance="fill" color="accent">
+                <h2>Mức lương thấp nhất</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.salaryMin}}</p>
+            </div>
+            <div class="example-full-width" appearance="fill" color="accent">
+                <h2>Số lượng</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.qtyPerson}}</p>
+            </div>
+        </div>
+        <div class="addname">
+            <div class="example-full-width-fix" appearance="fill" color="accent">
+                <h2>Liên hệ</h2>
+                <p placeholder="Nhập tên công việc" type="text">{{job.contact.email}}</p>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="example-button-row d-flex justify-content-center">
+    <button class="btn btn-primary mr-2" (click)="openPDF()">Xuất PDF</button>
+    <button type="reset" class="btn btn-primary">Hủy</button>
+</div>

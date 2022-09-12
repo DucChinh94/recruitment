@@ -1,0 +1,229 @@
+<div class="example-label"><b style="
+    top: -8px;
+position: relative;
+left: 350px;
+font-size: 1.5rem;">Nhập thông tin công việc</b>
+</div>
+<form [formGroup]="formAdd" class="example-form">
+  <div class="addname">
+    <mat-form-field class="example-full-width" appearance="fill" color="accent">
+      <mat-label>Tên công việc</mat-label>
+      <input matInput placeholder="Nhập tên công việc" formControlName="name" type="text">
+      <div *ngIf=" f.name.invalid && (f.name.dirty || f.name.touched)">
+        <div *ngIf="f.name.errors">
+          <div *ngIf="f.name.errors.required">
+            <small class="text-danger">*Không được bỏ trống</small>
+          </div>
+          <div *ngIf="f.name.errors.maxLength">
+            <small class="text-danger">*Vượt quá số kí tự cho phép</small>
+          </div>
+        </div>
+      </div>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill" color="accent">
+      <mat-label>Vị trí công việc</mat-label>
+      <select matNativeControl formControlName="jobPosition" [(ngModel)]="jobPosition">
+        <option *ngFor="let jobPosition of jobPositions" [ngValue]="jobPosition" selected>
+          {{jobPosition.description}}</option>
+        <!-- <option value="test">test</option>
+        <option value="BA">BA</option>
+        <option value="PM">PM</option> -->
+      </select>
+      <div *ngIf=" f.jobPosition.invalid && (f.jobPosition.dirty || f.jobPosition.touched)">
+        <div *ngIf="f.jobPosition.errors">
+          <div *ngIf="f.jobPosition.errors.required">
+            <small class="text-danger">*Không được bỏ trống</small>
+          </div>
+        </div>
+      </div>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill" color="accent">
+      <mat-label>Địa chỉ làm việc</mat-label>
+      <select matNativeControl formControlName="addressWork">
+        <option value="Hà Nội" selected>Hà Nội</option>
+        <option value="Sài Gòn">Sài Gòn</option>
+        <option value="Đà Nẵng">Đà Nẵng</option>
+        <option value="Hải Phòng">Hải Phòng</option>
+      </select>
+    </mat-form-field>
+  </div>
+
+  <div class="addname">
+    <mat-form-field class="example-full-width" appearance="fill" color="accent">
+      <mat-label>Số năm kinh nghiệm</mat-label>
+      <input matInput placeholder="Nhập số năm kinh nghiệm" formControlName="numberExperience" type="number">
+      <div *ngIf=" f.numberExperience.invalid && (f.numberExperience.dirty || f.numberExperience.touched)">
+        <div *ngIf="f.numberExperience.errors">
+          <div *ngIf="f.numberExperience.errors.required">
+            <small class="text-danger">*Không được bỏ trống</small>
+          </div>
+        </div>
+      </div>
+      <div *ngIf=" (f.numberExperience.dirty || f.numberExperience.touched)">
+        <div *ngIf="formAdd.value.numberExperience <=0">
+          <small class="text-danger">*Không được bé hơn 1</small>
+        </div>
+      </div>
+
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill" color="accent">
+      <mat-label>Hình thức làm việc</mat-label>
+      <select matNativeControl formControlName="workingForm" [(ngModel)]="workingForm">
+        <option *ngFor="let workingForm of workingForms" [ngValue]="workingForm" selected>
+          {{workingForm.description}}</option>
+
+      </select>
+      <div *ngIf=" f.workingForm.invalid && (f.workingForm.dirty || f.workingForm.touched)">
+        <div *ngIf="f.workingForm.errors">
+          <div *ngIf="f.workingForm.errors.required">
+            <small class="text-danger">*Không được bỏ trống</small>
+          </div>
+        </div>
+      </div>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill" color="accent">
+      <mat-label>Trạng thái công việc</mat-label>
+      <select matNativeControl formControlName="statusJob">
+        <option value="chờ xét duyệt">chờ xét duyệt</option>
+
+      </select>
+      <div *ngIf=" f.statusJob.invalid && (f.statusJob.dirty || f.statusJob.touched)">
+        <div *ngIf="f.statusJob.errors">
+          <div *ngIf="f.statusJob.errors.required">
+            <small class="text-danger">*Không được bỏ trống</small>
+          </div>
+        </div>
+      </div>
+    </mat-form-field>
+
+  </div>
+  <div>
+    <mat-form-field class="example-full-width-fix" appearance="fill" color="accent">
+      <mat-label>Mô tả công việc</mat-label>
+      <textarea matInput placeholder="Nhập mô tả công việc" formControlName="description" type="text"></textarea>
+    </mat-form-field>
+  </div>
+
+  <div class="addname">
+
+    <mat-form-field class="example-full-width" appearance="fill" color="accent">
+      <mat-label>Trình độ học vấn</mat-label>
+      <select matNativeControl formControlName="academicLevel" [(ngModel)]="academicLevel">
+        <option *ngFor="let academicLevel of academicLevels" [ngValue]="academicLevel" selected>
+          {{academicLevel.description}}</option>
+
+      </select>
+      <div *ngIf=" f.academicLevel.invalid && (f.academicLevel.dirty || f.academicLevel.touched)">
+        <div *ngIf="f.academicLevel.errors">
+          <div *ngIf="f.academicLevel.errors.required">
+            <small class="text-danger">*Không được bỏ trống</small>
+          </div>
+        </div>
+      </div>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill" color="accent">
+      <mat-label>Trình độ chuyên môn</mat-label>
+      <select matNativeControl formControlName="rank" [(ngModel)]="rank">
+        <option *ngFor="let rank of ranks" [ngValue]="rank" selected>{{rank.description}}</option>
+      </select>
+      <div *ngIf=" f.rank.invalid && (f.rank.dirty || f.rank.touched)">
+        <div *ngIf="f.rank.errors">
+          <div *ngIf="f.rank.errors.required">
+            <small class="text-danger">*Không được bỏ trống</small>
+          </div>
+        </div>
+      </div>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill" color="accent">
+      <mat-label>Ngày hết hạn</mat-label>
+      <input matInput placeholder="Nhập ngày hết hạn" formControlName="dueDate" type="date">
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field class="example-full-width-fix" appearance="fill" color="accent">
+      <mat-label>Yêu cầu</mat-label>
+      <textarea matInput placeholder="Nhập yêu cầu" formControlName="jobRequirement" type="text"></textarea>
+    </mat-form-field>
+  </div>
+  <div class="addname">
+    <mat-form-field class="example-full-width-fix" appearance="fill" color="accent">
+      <mat-label>Quyền lợi</mat-label>
+      <textarea matInput placeholder="Nhập quyền lợi" formControlName="benefits" type="text"></textarea>
+    </mat-form-field>
+
+  </div>
+  <div class="addname">
+    <mat-form-field class="example-chip-list" appearance="fill" color="accent">
+      <mat-label>Kỹ năng</mat-label>
+      <mat-chip-list #chipList aria-label="Fruit selection">
+        <mat-chip *ngFor="let skill of skills" (removed)="remove(skill)">
+          {{skill.name}}
+          <button matChipRemove>
+            <mat-icon>cancel</mat-icon>
+          </button>
+        </mat-chip>
+        <input placeholder="java, Springboot, ..." [matChipInputFor]="chipList"
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+          (matChipInputTokenEnd)="add($event)" formControlName="skills">
+      </mat-chip-list>
+      <div *ngIf=" f.skills.invalid && (f.skills.dirty || f.skills.touched)">
+        <div *ngIf="f.skills.errors">
+          <div *ngIf="f.skills.errors.required">
+            <small class="text-danger">*Không được bỏ trống</small>
+          </div>
+        </div>
+      </div>
+    </mat-form-field>
+  </div>
+
+  <div class="addname">
+    <mat-form-field class="example-full-width" appearance="fill" color="accent">
+      <mat-label>Mức lương cao nhất</mat-label>
+      <input matInput placeholder="Nhập mức lương cao nhất" formControlName="salaryMax" type="text">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill" color="accent">
+      <mat-label>Mức lương thấp nhất</mat-label>
+      <input matInput placeholder="Nhập mức lương thấp nhất" formControlName="salaryMin" type="text">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill" color="accent">
+      <mat-label>Số lượng</mat-label>
+      <input matInput placeholder="Số lượng muốn tuyển" formControlName="qtyPerson" type="number">
+      <div *ngIf=" (f.qtyPerson.dirty || f.qtyPerson.touched)">
+        <div *ngIf="formAdd.value.qtyPerson <=0">
+          <small class="text-danger">*Không được bé hơn 1</small>
+        </div>
+      </div>
+      <div *ngIf=" f.qtyPerson.invalid && (f.qtyPerson.dirty || f.qtyPerson.touched)">
+        <div *ngIf="f.qtyPerson.errors">
+          <div *ngIf="f.qtyPerson.errors.required">
+            <small class="text-danger">*Không được bỏ trống</small>
+          </div>
+        </div>
+      </div>
+    </mat-form-field>
+
+  </div>
+  <div class="addname">
+    <mat-form-field class="example-full-width-fix" appearance="fill" color="accent">
+      <mat-label>Liên hệ</mat-label>
+      <select matNativeControl formControlName="contact" [(ngModel)]="user">
+        <option *ngFor="let user of users" [ngValue]="user" selected>{{user.userName}}</option>
+      </select>
+      <div *ngIf=" f.contact.invalid && (f.contact.dirty || f.contact.touched)">
+        <div *ngIf="f.contact.errors">
+          <div *ngIf="f.contact.errors.required">
+            <small class="text-danger">*Không được bỏ trống</small>
+          </div>
+        </div>
+      </div>
+    </mat-form-field>
+  </div>
+  <div class="example-button-row d-flex justify-content-center">
+    <button class="btn btn-primary mr-2" [disabled]="!formAdd.valid || formAdd.value.numberExperience <=0
+      || formAdd.value.qtyPerson<=0" (click)='addJobConfirm($event)'>Tạo
+      mới</button>
+    <button type="reset" class="btn btn-primary">Hủy</button>
+  </div>
+</form>

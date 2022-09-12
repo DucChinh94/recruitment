@@ -1,0 +1,72 @@
+<div class="d-flex">
+    <div class="btnfix">
+        <button type="button" id="btn" (click)="downloadCV()" class="btn btn-primary">Tải xuống CV</button>
+    </div>
+
+    <div *ngIf="this.dataSource.statusJobRegister.code === 'chờ duyệt'">
+        <button type="button" id="btn" class="btn btn-primary" (click)="status2()">Xét Duyệt</button>
+    </div>
+
+    <div *ngIf="this.dataSource.statusJobRegister.code !== 'ứng viên bị từ chối'
+         && this.dataSource.statusJobRegister.code !== 'ứng viên hủy ứng tuyển'
+          && this.dataSource.statusJobRegister.code !== 'tuyển thành công' && checkRefuse === false">
+        <button type="button" id="btn" class="btn btn-danger" (click)="inputReason()">Từ chối ứng viên</button>
+    </div>
+    <div *ngIf="checkRefuse === true" style="display:flex; flex-direction:row;">
+        <input type="text" matInput placeholder="Nhập Lý do" name="info" id="searchStr">
+        <button type="button" id="btn" class="btn btn-danger" (click)=" refuse()">Đồng ý</button>
+        <button type="button" id="btn" class="btn btn-primary" (click)=" cancel()">Hủy</button>
+    </div>
+
+    <div
+        *ngIf="this.dataSource.statusJobRegister.code === 'ứng viên bị từ chối' || this.dataSource.statusJobRegister.code === 'ứng viên hủy ứng tuyển'">
+        <button type="button" id="btn" class="btn btn-primary" (click)="viewReasons()">Xem lí do</button>
+    </div>
+
+    <div *ngIf="this.dataSource.statusJobRegister.code === 'chờ phỏng vấn' ">
+        <button type="button" id="btn" class="btn btn-primary" (click)="bookInterview()">Đặt lịch phỏng vấn</button>
+    </div>
+
+    <div *ngIf="this.dataSource.statusJobRegister.code === 'đang phỏng vấn' ">
+        <button type="button" id="btn" class="btn btn-primary" (click)="ok()">Tuyển thành công</button>
+    </div>
+
+    <div *ngIf="checkRefuse1 === true">
+        <button type="button" id="btn" class="btn btn-danger btn-sm" (click)=" success()">Đồng ý</button>
+        <button type="button" id="btn" class="btn btn-primary btn-sm" (click)=" cancel1()">Hủy</button>
+    </div>
+
+</div>
+<table style="width:80%;" class="table">
+    <thead>
+        <tr>
+            <th scope="col">Trường thông tin</th>
+            <th scope="col">Thông tin chi tiết</th>
+        </tr>
+        <tr>
+            <th scope="row">Vị trí công việc</th>
+            <td> {{dataSource.job.jobPosition.description}} </td>
+
+        </tr>
+        <tr>
+            <th scope="row">Tên ứng viên</th>
+            <td> {{dataSource.user.name}} </td>
+        </tr>
+        <tr>
+            <th scope="row">Email</th>
+            <td> {{dataSource.user.email}} </td>
+        </tr>
+        <tr>
+            <th scope="row">Số điện thoại</th>
+            <td> {{dataSource.user.phoneNumber}} </td>
+        </tr>
+        <tr>
+            <th scope="row">Ngày sinh</th>
+            <td> {{dataSource.user.birthDay}} </td>
+        </tr>
+        <tr>
+            <th scope="row">Mức lương mong muốn</th>
+            <td> {{dataSource.job.salaryMax}}</td><span><i class="fa fa-dollar" style="font-size:24px"></i></span>
+        </tr>
+    </thead>
+</table>

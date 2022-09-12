@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <meta name="author" content="n" />
+
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="ScriptTop">
+        <div class="rt-container">
+            <div class="col-rt-4" id="float-right">
+
+                <!-- Ad Here -->
+
+            </div>
+
+        </div>
+    </div>
+
+    <header class="ScriptHeader">
+        <div class="rt-container">
+            <div class="col-rt-12">
+                <div class="rt-heading">
+                    <h1>Sign Up</h1>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <form class="codehim-form">
+        <div class="form-title">
+            <div class="user-icon gr-bg">
+                <i class="fa fa-user"></i>
+            </div>
+            <h2>Become our member</h2>
+        </div>
+
+        <form [formGroup]="formSignup">
+            <label for="email" id="incorrect-user"><i class="fa fa-envelope"></i> User name</label>
+            <input type="text" id="email" class="cm-input" placeholder="Enter username" formControlName="userName">
+            <div *ngIf="f.userName.errors">
+                <div *ngIf="f.userName.errors.required"><small class="text-danger">*Không được bỏ trống</small></div>
+            </div>
+            <div *ngIf="messages === 'Username đã tồn tại'">
+                <small class="text-danger">*{{messages}}</small>
+            </div>
+
+            <label for="email" id="incorrect-user"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" class="cm-input" placeholder="Enter email" formControlName="email">
+            <div>
+                <div *ngIf=" f.email.invalid && (f.email.dirty || f.email.touched)">
+                    <div *ngIf="f.email.errors">
+                        <div *ngIf="f.email.errors.required">
+                            <small class="text-danger">*Không được bỏ trống</small>
+                        </div>
+                        <div *ngIf="f.email.errors.email">
+                            <small class="text-danger">*Sai định dạng</small>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="messages === 'Email đã tồn tại'">
+                    <small class="text-danger">*{{messages}}</small>
+                </div>
+            </div>
+
+            <div class="form-contents">
+                <div class="form-group-content">
+                    <label for="pass"><i class="fa fa-lock" id="passlabel"></i> Password</label>
+                    <input id="pass" type="password" class="cm-input" placeholder="Enter password"
+                        formControlName="password">
+                    <div *ngIf=" f.password.invalid && (f.password.dirty || f.password.touched)">
+                        <!-- <div *ngIf="f.password.errors"> -->
+                        <div *ngIf="f.password.errors.required">
+                            <small class="text-danger">*Không được bỏ trống</small>
+                        </div>
+                        <div *ngIf="f.password.errors.pattern">
+                            <small class="text-danger">*Sai định dạng</small>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                    <div class="display-block"
+                        *ngIf="!(f.password.value===f.newPassword.value) || !(f.password.value !== null && f.newPassword.value !== null) ">
+                        <small class="text-danger">*Mật khẩu không khớp</small>
+                    </div>
+                </div>
+                <div class="form-group-content">
+                    <label for="pass"><i class="fa fa-lock" id="repasslabel"></i> Re-enter Password</label>
+                    <input id="repass" type="password" class="cm-input" placeholder="Re-enter password "
+                        formControlName="newPassword">
+                </div>
+            </div>
+
+            <div class="form-contents">
+                <div class="form-group-content">
+                    <label for="pass"><i class="fa fa-lock" id="passlabel"></i> Phone</label>
+                    <input id="pass" type="Phone" class="cm-input" placeholder="84..." formControlName="phoneNumber">
+                    <div *ngIf=" f.phoneNumber.invalid && (f.phoneNumber.dirty || f.phoneNumber.touched)">
+
+                        <div *ngIf="f.phoneNumber.errors.required">
+                            <small class="text-danger">*Không được bỏ trống</small>
+                        </div>
+                        <div *ngIf="f.phoneNumber.errors.pattern">
+                            <small class="text-danger">*Sai định dạng số điện thoại</small>
+                        </div>
+
+                    </div>
+                    <div *ngIf="messages === 'Phone đã tồn tại'">
+                        <small class="text-danger">*{{messages}}</small>
+                    </div>
+                </div>
+                <div class="form-group-content">
+                    <label for="pass"><i class="fa fa-lock" id="repasslabel"></i> Birthday</label>
+                    <input id="brithday" type="date" class="cm-input" data-date-format="DD-MMMM-YYYY"
+                        (change)="getbirthday($event)" formControlName="birthDay">
+                </div>
+            </div>
+
+            <button type="submit" [disabled]="!formSignup.valid || this.checkkk !== true " class="btn btn-primary"
+                (click)="signup()" style="
+            left: 136px;
+            position: relative;">Sign
+                up</button>
+        </form>

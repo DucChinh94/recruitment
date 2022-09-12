@@ -1,0 +1,125 @@
+<div class="example-button-row">
+    <b>Lọc theo</b>
+    <div style="justify-content: space-between; display: flex;">
+        <mat-form-field appearance="fill" class="example-full-width-fix">
+            <mat-label>Trạng thái</mat-label>
+            <select aria-label="State" matNativeControl required (change)="selectedStatus($event)">
+                <option value="chờ duyệt"> chờ duyệt</option>
+                <option value="chờ phỏng vấn"> chờ phỏng vấn</option>
+                <option value="đang phỏng vấn">đang phỏng vấn</option>
+                <option value="tuyển thành công">tuyển thành công</option>
+                <option value="ứng viên hủy ứng tuyển">ứng viên hủy ứng tuyển</option>
+                <option value="ứng viên bị từ chối">ứng viên bị từ chối</option>
+            </select>
+
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="example-full-width-fix">
+            <mat-label>Ngày ứng tuyển gần nhất</mat-label>
+            <input id="dateMax" matInput type="date">
+
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="example-full-width-fix">
+            <mat-label>Ngày ứng tuyển xa nhất </mat-label>
+            <input id="dateMin" matInput type="date">
+
+        </mat-form-field>
+    </div>
+    <form class="example-form">
+
+        <div class="fix-layout-content">
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <input type="text" matInput placeholder="mã ứng viên, mã công việc" name="info" id="searchStr">
+                <mat-icon matPrefix (click)="search()">search</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Sắp xếp theo</mat-label>
+                <select aria-label="State" matNativeControl required (change)="selected($event)">
+                    <option value=""></option>
+                    <option value="" value="dateInterview">Ngày ứng tuyển</option>
+                    <!-- <option value="" value="dateRegister" *ngFor="let obj of sortByLastModifiedDesc"> {{obj.jobRegister.dateRegister}}ngày phỏng vấn</option> -->
+                </select>
+
+            </mat-form-field>
+        </div>
+    </form>
+
+    <div class="example-flex-container">
+        <div class="example-button-container">
+
+        </div>
+        <div class="example-button-container">
+
+        </div>
+
+    </div>
+</div>
+<div class="table-data">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let i = index"> {{i+1}} </td>
+        </ng-container>
+        <ng-container matColumnDef="userName">
+            <th mat-header-cell *matHeaderCellDef>Tên ứng viên</th>
+            <td mat-cell *matCellDef="let element"> {{element.user.name}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="dateInterview">
+            <th mat-header-cell *matHeaderCellDef>Ngày phỏng vấn</th>
+            <td mat-cell *matCellDef="let element"> {{element.dateInterview}} </td>
+        </ng-container>
+        <ng-container matColumnDef="dateRegister">
+            <th mat-header-cell *matHeaderCellDef> Ngày ứng tuyển</th>
+            <td mat-cell *matCellDef="let element"> {{element.dateRegister}} </td>
+        </ng-container>
+        <ng-container matColumnDef="methodInterview">
+            <th mat-header-cell *matHeaderCellDef>Hình thức phỏng vấn</th>
+            <td mat-cell *matCellDef="let element"> {{element.methodInterview}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="statusJobRegister">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element"> {{element.statusJobRegister.name}}
+                <button (click)="showDetails(element)" mat-mini-fab color="primary">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <button
+                    *ngIf="element.statusJobRegister.description === 'ứng viên hủy ứng tuyển' || element.statusJobRegister.description === 'ứng viên bị từ chối'"
+                    style="margin-left : 10px ;" (click)="viewReasons(element)" mat-mini-fab color="warn">
+                    <mat-icon>question_mark</mat-icon>
+                </button>
+
+                <button *ngIf="this.element.statusJobRegister.code === 'chờ phỏng vấn' " type="button" id="btn"
+                    style="margin-left : 10px ;" mat-mini-fab color="primary" (click)="bookInterview()">
+                    <mat-icon>calendar_month</mat-icon>
+                </button>
+
+
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef>Edit</th>
+            <td mat-cell *matCellDef="let element">
+                <div class="example-button-container">
+                    <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon"
+                        (click)="editJR(element)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </div>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <button id="al" aria-label="Name">
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>hihih
+        </button>
+    </table>
+    <mat-paginator [length]='100' [pageIndex]="currentPage" [pageSize]="pageSize" (page)="pageChanged($event)"
+        [pageSizeOptions]="pageSizeOptions" aria-label="Select page">
+    </mat-paginator>
+</div>

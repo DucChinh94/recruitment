@@ -1,0 +1,33 @@
+<div class="choose-day">
+    <span>Từ ngày</span>
+    <input type="Date" id='smalldate' (change)="selectedSmallDate($event)">
+    <span>Đến ngày</span>
+    <input type="Date" id='bigDate' (change)="selectedBigDate($event)">
+    <!-- <div *ngIf=" new Date(smalldate) > new Date(bigDate)">
+        <small class="text-danger">*không thể chọn ngày bé hơn</small>
+    </div> -->
+</div>
+
+<div class="fix-column">
+    <div class="fix-card">
+        <mat-card>Tổng số việc đã đăng: {{puslishedJob}}</mat-card>
+        <mat-card>Tổng số hồ sơ chờ phỏng vấn: {{jobRegWaitingFor}}</mat-card>
+        <mat-card>Tổng số hồ sơ đang phỏng vấn: {{jobRegInterviewing}}</mat-card>
+        <mat-card>Tổng số việc gần hết hạn: {{jobduesoon}}</mat-card>
+    </div>
+
+    <div class="fix-card">
+        <mat-card>Tổng số lượt xem: {{jobviews}}</mat-card>
+        <mat-card>Tổng số ứng viên ứng tuyển: {{jobReg}}</mat-card>
+        <mat-card>Tổng số ứng viên thành công: {{pieData[1]}}</mat-card>
+        <mat-card>Tổng số ứng viên bị từ chối: {{pieData[0]}}</mat-card>
+    </div>
+</div>
+
+<div class="fix-content">
+
+    <div>
+        <canvas id="lineCanvas" style="height:100px; width:100px"></canvas>
+    </div>
+    <canvas id="myPieChart" width="500px" height="350px"></canvas>
+</div>

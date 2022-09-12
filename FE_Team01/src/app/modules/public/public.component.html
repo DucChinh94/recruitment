@@ -1,0 +1,65 @@
+<div class="container-fluid bg-light position-relative shadow" class="header-sticky">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5 navbar-fixed-top">
+        <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px; text-decoration: none;">
+            <i class="flaticon-043-teddy-bear"></i>
+            <span class="text-basic" style="
+            text-decoration: none;
+        ">ITSOL</span>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav font-weight-bold mx-auto py-0">
+                <a [routerLink]="['/public/jobpublic']" routerLinkActive="router-link-active"
+                    class="nav-item nav-link active" style="
+                    text-decoration: none;
+                ">Home</a>
+                <a [routerLink]="['']" routerLinkActive="router-link-active" class="nav-item nav-link">Về chúng
+                    tôi</a>
+                <a href="class.html" class="nav-item nav-link" style="
+                text-decoration: none;
+            ">Tạo</a>
+                <a href="team.html" class="nav-item nav-link" style="
+                text-decoration: none;
+            ">Đội ngũ</a>
+                <a href="gallery.html" class="nav-item nav-link" style="
+                text-decoration: none;
+            ">Thông tin</a>
+                <a href="contact.html" class="nav-item nav-link" style="
+                text-decoration: none;
+            ">Liên hệ</a>
+            </div>
+            <button *ngIf="check=== false" [routerLink]="['/auth']" routerLinkActive="router-link-active"
+                class="btn px-4">Đăng nhập</button>
+            <div *ngIf="check=== true" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" style="
+                text-decoration: none;
+            ">Xin chào {{name}}</a>
+                <div class="dropdown-menu rounded-0 m-0">
+                    <a [routerLink]="['/profile']" routerLinkActive="router-link-active" class="dropdown-item" style="
+                    text-decoration: none;
+                ">Thông
+                        tin</a>
+                    <a [routerLink]="['/changepassword']" routerLinkActive="router-link-active" class="dropdown-item"
+                        style="
+                        text-decoration: none;
+                    ">Đổi mật khẩu</a>
+                    <a *ngIf="role==='ROLE_ADMIN' || role === 'ROLE_JE'" [routerLink]="['/home']"
+                        routerLinkActive="router-link-active" class="dropdown-item" style="
+    text-decoration: none;
+">Quay lại trang quản trị</a>
+                    <a style="
+                    text-decoration: none;
+                " class="dropdown-item" [routerLink]="['/public/jobpublic']" routerLinkActive="router-link-active"
+                        (click)="logout()">Đăng xuất</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+</div>
+
+<router-outlet></router-outlet>

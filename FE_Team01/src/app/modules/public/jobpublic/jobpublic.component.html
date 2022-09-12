@@ -1,0 +1,89 @@
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2">
+            <p class="section-title px-5">
+                <span class="px-2"></span>
+            </p>
+            <h1 class="mb-4">Các công việc có sẵn</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-4" *ngFor="let job of data">
+                <div class="card border-0 bg-light shadow-sm pb-2">
+                    <img class="card-img-top mb-2" src="img/class-1.jpg" alt="" />
+                    <div class="card-body text-center">
+                        <h1 class="card-title">{{job.name}}</h1>
+                        <p class="card-text">
+                            {{job.description}}
+                        </p>
+                    </div>
+                    <div class="card-footer bg-transparent py-4 px-5">
+                        <div class="row border-bottom ">
+                            <div class="col-6 py-1 text-left border-right ">
+                                <strong>Trình độ học vấn yêu cầu</strong>
+                            </div>
+                            <div class="col-6 py-1">{{job.academicLevel.description}}</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-left border-right">
+                                <strong>Địa điểm làm việc</strong>
+                            </div>
+                            <div class="col-6 py-1">{{job.addressWork}}</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-left border-right">
+                                <strong>Vị Trí Công việc</strong>
+                            </div>
+                            <div class="col-6 py-1">{{job.jobPosition.description}}</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-left border-right">
+                                <strong>Số lượng cần tuyển</strong>
+                            </div>
+                            <div class="col-6 py-1">{{job.qtyPerson}}</div>
+                        </div>
+                        <!-- <div class="row border-bottom">
+                            <div class="col-6 py-1 text-left border-right">
+                                <strong>Level</strong>
+                            </div>
+                            <div class="col-6 py-1">{{job.rank.description}}</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-left border-right">
+                                <strong>Số năm kinh nghiệm</strong>
+                            </div>
+                            <div class="col-6 py-1">{{job.numberExperience}}</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-left border-right">
+                                <strong>Kỹ năng</strong>
+                            </div>
+                            <div class="col-6 py-1">{{job.skills}}</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-left border-right">
+                                <strong>Mức lương</strong>
+                            </div>
+                            <div class="col-6 py-1"></div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-left border-right">
+                                <strong>Hình thức làm việc</strong>
+                            </div>
+                            <div class="col-6 py-1">{{job.workingForm.code}}</div>
+                        </div> -->
+                    </div>
+                    <button class="btn btn-primary px-4 mx-auto mb-4" (click)="takeJob(job)">Xem chi tiết</button>
+                </div>
+            </div>
+
+        </div>
+        <mat-paginator [length]="100" [pageSize]="10" [pageIndex]="currentPage" [pageSize]="pageSize"
+            (page)="pageChanged($event)" aria-label="Select page">
+        </mat-paginator>
+
+    </div>
+
+</div>
+
+<nb-layout> </nb-layout>
+<!-- Class End -->

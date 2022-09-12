@@ -1,0 +1,31 @@
+<p>Bạn muốn deactive? Mời nhập tên người dùng muốn deactive</p>
+<div class="example-label"><b style="
+        position: relative;
+        left: 145px;">Chắc chắn muốn deactive?</b>
+    <form [formGroup]="formDeactive" class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Ex. username" formControlName="username" type="text">
+        </mat-form-field>
+        <div *ngIf="f.username.errors">
+            <div *ngIf="f.username.errors.required"><small class="text-danger" style="
+                position: relative;
+                left: 61px;
+                top: -19px;
+            ">*Không được bỏ trống</small></div>
+        </div>
+        <div *ngIf="messages === 'Username không tồn tại'">
+            <small class="text-danger">*{{messages}}</small>
+        </div>
+        <div *ngIf="messages === 'Username này không phải JE'">
+            <small class="text-danger">*Người dùng này không phải JE</small>
+        </div>
+        <div class="example-button-row">
+            <button mat-stroked-button color="warn" (click)='deActiveJEConfirm($event)'>Đúng</button>
+        </div>
+        <div class="example-button-row">
+            <button mat-raised-button mat-dialog-close (click)='cancelAction($event)'>Thôi</button>
+        </div>
+    </form>
+
+</div>

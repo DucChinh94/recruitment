@@ -1,0 +1,30 @@
+<div class="justify-content-center d-flex " style=" margin-top: 5%;padding: 5px;">
+
+  <div class="col-4 justify-content-center div-form-fw">
+
+    <h2 class="m-2">Tìm tài khoản của bạn</h2>
+    <form [formGroup]="formSendotp " class="mt-5 mb-5" style="with:100%">
+      <h2>
+        Vui lòng nhập email để tìm kiếm tài khoản của bạn.</h2>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+          placeholder="Nhập email tài khoản" formControlName="email">
+      </div>
+      <div *ngIf=" f.email.invalid && (f.email.dirty || f.email.touched)">
+        <div *ngIf="f.email.errors.required">
+          <small class="text-danger">Trường thông tin không được để trống</small>
+        </div>
+        <div *ngIf="f.email.errors.email">
+          <small class="text-danger">Email không đúng định dạng</small>
+        </div>
+      </div>
+      <div *ngIf="messages === 'Email không tồn tại'">
+        <small class="text-danger">*{{messages}}</small>
+      </div>
+      <div class="btn-fw">
+        <button class="btn btn-primary " type="submit" [disabled]="!formSendotp.valid" (click)="send()">Send</button>
+      </div>
+    </form>
+
+  </div>
+</div>

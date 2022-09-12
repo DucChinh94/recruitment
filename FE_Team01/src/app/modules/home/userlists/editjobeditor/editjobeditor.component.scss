@@ -1,0 +1,55 @@
+section {
+    display: table;
+}
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    width: 490px;
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 120px;
+    position: relative;
+    left: 114px;
+}
+
+.example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    left: 45px;
+}
+
+.example-full-width {
+    width: 48%;
+    position: relative;
+    left: 30px;
+}
+
+.onaline {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+    left: -65px;
+}

@@ -1,0 +1,134 @@
+<div class="btnfix" *ngIf="check === true">
+  <button type="button" id="btn" class="btn btn-primary" (click)="update()">Cập nhật</button>
+
+  <div *ngIf="check===true && (jobdetails.statusJob.description ==='chưa đăng tuyển'||
+  jobdetails.statusJob ==='đang tuyển')">
+    <button type="button" id="btn" class="btn btn-primary">Xem trước</button>
+
+  </div>
+
+  <div *ngIf="check2 === true && jobdetails.statusJob.description ==='chờ xét duyệt'">
+    <button type="button" id="btn" class="btn btn-primary" (click)="approve()">Xét duyệt</button>
+    <button *ngIf="checkRefuse1 === true" type="button" id="btn" class="btn btn-danger btn-sm" (click)="conrfirm()">Đồng
+      ý</button>
+    <button *ngIf="checkRefuse1 === true" type="button" id="btn" class="btn btn-secondary btn-sm"
+      (click)="cancel()">Hủy</button>
+  </div>
+  <div *ngIf="check === true && jobdetails.statusJob.description ==='chờ xét duyệt'">
+    <button type="button" id="btn" (click)="approve3()" class="btn btn-primary">Từ chối duyệt</button>
+    <button *ngIf="checkRefuse4 === true" type="button" id="btn" class="btn btn-danger btn-sm"
+      (click)="conrfirm3()">Đồng
+      ý</button>
+    <button *ngIf="checkRefuse4 === true" type="button" id="btn" class="btn btn-secondary btn-sm"
+      (click)="cancel3()">Hủy</button>
+  </div>
+  <div *ngIf="check === true && jobdetails.statusJob.description ==='chưa đăng tuyển'">
+    <button type="button" id="btn" class="btn btn-primary" (click)="approve1()">Đăng tuyển</button>
+    <button *ngIf="checkRefuse2 === true" type="button" id="btn" class="btn btn-danger btn-sm"
+      (click)="conrfirm1()">Đồng
+      ý</button>
+    <button *ngIf="checkRefuse2 === true" type="button" id="btn" class="btn btn-secondary btn-sm"
+      (click)="cancel1()">Hủy</button>
+  </div>
+  <div *ngIf="check === true && jobdetails.statusJob.description ==='đang tuyển'">
+    <button type="button" id="btn" class="btn btn-primary" (click)="approve2()">Dừng tuyển</button>
+    <button *ngIf="checkRefuse3 === true" type="button" id="btn" class="btn btn-danger btn-sm"
+      (click)="conrfirm2()">Đồng
+      ý</button>
+    <button *ngIf="checkRefuse3 === true" type="button" id="btn" class="btn btn-secondary btn-sm"
+      (click)="cancel2()">Hủy</button>
+  </div>
+  <div *ngIf="check === true &&(jobdetails.statusJob.description !=='đã từ chối'&&
+  jobdetails.statusJob.description !=='đã đóng' &&jobdetails.statusJob.description !=='chờ xét duyệt')">
+    <button type="button" id="btn" class="btn btn-primary">Đóng</button>
+  </div>
+  <div *ngIf="check2 === true &&(jobdetails.statusJob.description ==='đã từ chối'||
+  jobdetails.statusJob ==='đã đóng')">
+    <button type="button" id="btn" class="btn btn-primary">Xóa</button>
+  </div>
+  <!-- 
+<button type="button" id="btn" (click)="click()" class="btn btn-primary">Xem lí do</button>
+
+<button type="button" id="btn" class="btn btn-primary">Đặt lịch phỏng vấn</button> -->
+
+</div>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" style="font-size: 1.5rem;">Trường thông tin</th>
+      <th scope="col" style="font-size: 1.5rem;">Thông tin chi tiết</th>
+    </tr>
+    <tr>
+      <th scope="row">Tên công việc</th>
+      <td> {{jobdetails.name}} </td>
+
+    </tr>
+    <tr>
+      <th scope="row">Vị trí tuyển dụng</th>
+      <td> {{jobdetails.jobPosition.code}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Số năm kinh nghiệm</th>
+      <td> {{jobdetails.numberExperience}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Hình thức làm việc</th>
+      <td> {{jobdetails.workingForm.description}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Địa chỉ làm việc</th>
+      <td> {{jobdetails.addressWork}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Trình độ học vấn</th>
+      <td> {{jobdetails.academicLevel.description}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Trình độ chuyên môn</th>
+      <td> {{jobdetails.rank.description}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Số lượng tuyển</th>
+      <td> {{jobdetails.qtyPerson}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Hạn nộp hồ sơ</th>
+      <td> {{jobdetails.dueDate}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Kỹ năng</th>
+      <td> {{jobdetails.skills}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Mô tả công việc</th>
+      <td> {{jobdetails.description}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Quyền lợi</th>
+      <td> {{jobdetails.benefits}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Yêu cầu</th>
+      <td> {{jobdetails.jobRequirement}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Mức lương tối đa</th>
+      <td> {{jobdetails.salaryMax}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Mức lương tối thiểu</th>
+      <td> {{jobdetails.salaryMin}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Liên hệ</th>
+      <td> {{jobdetails.contact.email}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Trạng thái</th>
+      <td> {{jobdetails.statusJob.description}} </td>
+    </tr>
+  </thead>
+
+</table>

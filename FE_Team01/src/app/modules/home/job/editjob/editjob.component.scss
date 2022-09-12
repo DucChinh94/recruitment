@@ -1,0 +1,28 @@
+.example-form {
+    min-width: 150px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 33%;
+}
+
+.addname {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.example-full-width-fix {
+    width: 100%;
+}
+
+.example-full-width-fix2 {
+    width: 49.8%;
+
+}
+
+.example-chip-list {
+    width: 100%;
+}

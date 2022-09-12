@@ -1,0 +1,92 @@
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mb-5">
+                <Strong>
+                    Mô tả
+                </Strong>
+                <p>{{job.description}}</p>
+                <div class="d-flex">
+                    <i class="fa fa-user-graduate  d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle"
+                        style="width: 45px; height: 45px"></i>
+                    <div class="pl-3">
+                        <Strong>Trình độ học vấn yêu cầu</Strong>
+                        <p>{{job.academicLevel.description}}</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <i class="fa fa-map-marker-alt d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle"
+                        style="width: 45px; height: 45px"></i>
+                    <div class="pl-3">
+                        <Strong>Địa điểm làm việc</Strong>
+                        <p>{{job.addressWork}}</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <i class="fa fa-user-tie d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle"
+                        style="width: 45px; height: 45px"></i>
+                    <div class="pl-3">
+                        <Strong>Vị Trí Công việc</Strong>
+                        <p>{{job.jobPosition.description}}</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <i class="fa fa-square-9 d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle"
+                        style="width: 45px; height: 45px"></i>
+                    <div class="pl-3">
+                        <strong>Số lượng cần tuyển</strong>
+                        <p class="m-0">{{job.qtyPerson}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 mb-5">
+                <div class="d-flex">
+                    <i class="fa fa-block-quote d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle"
+                        style="width: 45px; height: 45px"></i>
+                    <div class="pl-3">
+                        <Strong>Hình thức làm việc</Strong>
+                        <p>{{job.workingForm.code}}</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <i class="fa fa-layer-group d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle"
+                        style="width: 45px; height: 45px"></i>
+                    <div class="pl-3">
+                        <Strong>Level</Strong>
+                        <p>{{job.rank.description}}</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <i class="fa fa-calendar d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle"
+                        style="width: 45px; height: 45px"></i>
+                    <div class="pl-3">
+                        <Strong>Số năm kinh nghiệm</Strong>
+                        <p>{{job.numberExperience}}</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <i class="fa fa-brain d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle"
+                        style="width: 45px; height: 45px"></i>
+                    <div class="pl-3">
+                        <Strong>Kỹ năng</Strong>
+                        <p>{{job.skills}}</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <i class="fa fa-ranking-star d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle"
+                        style="width: 45px; height: 45px"></i>
+                    <div class="pl-3">
+                        <strong>Mức lương</strong>
+                        <p class="m-0">{{job.salaryMin}}VND - {{job.salaryMax}}VND</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">
+                Ứng tuyển Ngay
+            </button>
+
+
+
+
+        </div>
+    </div>

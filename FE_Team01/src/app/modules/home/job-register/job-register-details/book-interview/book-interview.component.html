@@ -1,0 +1,42 @@
+<form class="example-form" [formGroup]="formUpdate">
+    <div>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Giờ phỏng vấn</mat-label>
+            <input matInput placeholder="Ex. 13/05/2001" type="datetime-local" formControlName="dateInterview">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Hình thức phỏng vấn</mat-label>
+            <select matNativeControl required id="chooseForm" (change)="chooseForm()" formControlName="methodInterview">
+                <option value="offline">offline</option>
+                <option value="online">online</option>
+            </select>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field *ngIf="check === 'offline'" class="example-full-width" appearance="fill">
+            <mat-label>Địa chỉ phỏng vấn</mat-label>
+            <input matInput placeholder="3A buidling" type="text" formControlName="addressInterview">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field *ngIf="check === 'online'" class="example-full-width" appearance="fill">
+            <mat-label>Phỏng vấn thông qua</mat-label>
+            <select matNativeControl required id='addressInterviewx' formControlName="addressInterview">
+                <option value="Skype">Skype</option>
+                <option value="Zoom">Zoom</option>
+                <option value="Google meet">Google meet</option>
+                <option value="MS Teams">MS Teams</option>
+            </select>
+        </mat-form-field>
+    </div>
+
+    <div class="example-button-row">
+        <button mat-stroked-button color="warn" [disabled]="!formUpdate.valid" (click)='addJEConfirm($event)'>Đặt
+            lịch</button>
+        <button mat-raised-button mat-dialog-close (click)='cancelAction($event)'>Hủy</button>
+    </div>
+</form>

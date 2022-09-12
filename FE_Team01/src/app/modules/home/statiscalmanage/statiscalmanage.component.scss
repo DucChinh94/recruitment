@@ -1,0 +1,36 @@
+.chartjs-render-monitor {
+    height: 350px !important;
+    width: 500px !important;
+    display: block !important;
+}
+
+.fix-content {
+    display: flex;
+    flex-direction: row;
+}
+
+div .mat-card {
+    width: 24%;
+    border: 1px black;
+    font-size: 0.69rem;
+
+}
+
+.fix-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.fix-column {
+    justify-content: space-between;
+}
+
+.choose-day {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    padding-bottom: 15px;
+    margin-left: 177px !important;
+}

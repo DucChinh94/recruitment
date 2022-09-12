@@ -1,0 +1,100 @@
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                    class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <form [formGroup]="formLogin">
+                    <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                        <p class="lead fw-normal mb-0 me-3">Đăng nhập cùng </p>
+                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                            <i class="pi pi-facebook"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                            <i class="pi pi-twitter"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                            <i class="pi pi-linkedin"></i>
+                        </button>
+                    </div>
+
+                    <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0">Hoặc</p>
+                    </div>
+
+                    <!-- Email input -->
+                    <div class="p-float-label mb-4">
+                        <input id="p-inputtext-lg" class="custom-input" formControlName="userName" type="text"
+                            pInputText>
+                        <label for="p-inputtext-lg">Tài khoản</label>
+                        <div *ngIf=" f.userName.invalid && (f.userName.dirty || f.userName.touched)">
+                            <div *ngIf="f.userName.errors.required">
+                                <small class="text-danger">Tài khoản không được để trống</small>
+                            </div>
+                        </div>
+                        <mat-error *ngIf="messages === 'Tài khoản không tồn tại'" class="alert-danger">{{
+                            messages
+                            }}</mat-error>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="p-float-label custom-input mb-3">
+
+                        <input id="p-inputtext-lg" class="custom-input" formControlName="password" type="password"
+                            pInputText />
+                        <label for="p-inputtext-lg">Mật khẩu</label>
+                        <div *ngIf=" f.password.invalid && (f.password.dirty || f.password.touched)">
+                            <div *ngIf="f.password.errors.required">
+                                <small class="text-danger">Mật khẩu không được để trống</small>
+                            </div>
+                            <div *ngIf="f.password.errors.pattern">
+                                <small class="text-danger">Mật khẩu sai định dạng</small>
+                            </div>
+                        </div>
+
+                        <mat-error *ngIf="messages === 'Sai thông tin mật khẩu'" class="alert-danger mt-2">{{
+                            messages
+                            }}</mat-error>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a [routerLink]="['/sendotp']" routerLinkActive="router-link-active" class="text-body">Lấy lại
+                            mật khẩu?</a>
+                    </div>
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button pButton type="button" label="Đăng nhập" [disabled]="!formLogin.valid"
+                            (click)="onSubmit()"></button>
+                        <p class="small fw-bold mt-2 pt-1 mb-0">Đăng ký tài khoản ? <a [routerLink]="['/signup']"
+                                routerLinkActive="router-link-active" class="link-danger">ITSOL</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div
+        class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+        <!-- Copyright -->
+        <div class="text-white mb-3 mb-md-0">
+            Mockup 1 - Java32 - ITSOL
+        </div>
+        <!-- Copyright -->
+
+        <!-- Right -->
+        <div>
+            <a href="#!" class="text-white me-4">
+                <i class="pi pi-facebook"></i>
+            </a>
+            <a href="#!" class="text-white me-4">
+                <i class="pi pi-twitter"></i>
+            </a>
+            <a href="#!" class="text-white">
+                <i class="pi pi-linkedin"></i>
+            </a>
+        </div>
+        <!-- Right -->
+    </div>
+</section>

@@ -1,0 +1,87 @@
+[33mcommit f7026292b6cc6eeaf21676e73655509474598dde[m[33m ([m[1;36mHEAD -> [m[1;32mtrungngoduc[m[33m)[m
+Author: TrungAnh12345 <95467659+TrungAnh12345@users.noreply.github.com>
+Date:   Fri Jul 8 11:54:45 2022 +0700
+
+    crud_jobregister
+
+[33mcommit 45d42a289aac133566fd66b89aa87161536b9274[m[33m ([m[1;31morigin/trungngoduc[m[33m)[m
+Author: TrungAnh12345 <95467659+TrungAnh12345@users.noreply.github.com>
+Date:   Thu Jul 7 20:08:00 2022 +0700
+
+    update
+
+[33mcommit 64b793cc0692b1d3b37039622c1697e8e25196c9[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Xuân Phạm <94380878+xuanpti@users.noreply.github.com>
+Date:   Wed Jul 6 09:54:46 2022 +0700
+
+    Update workspace.xml
+
+[33mcommit 82a3338e800eaa49fc5c1de6345e5cfd5bdb52f0[m
+Merge: cc64050 6df27a5
+Author: Nguyễn Đức Chính <89322969+DucChinh94@users.noreply.github.com>
+Date:   Wed Jul 6 09:43:44 2022 +0700
+
+    Merge pull request #4 from xuanpti/chinhnd
+    
+    update JobManagement
+
+[33mcommit 6df27a52ae4579f89a79800f266a0ac584d19554[m[33m ([m[1;31morigin/chinhnd[m[33m)[m
+Merge: b6852a2 cc64050
+Author: Nguyễn Đức Chính <89322969+DucChinh94@users.noreply.github.com>
+Date:   Wed Jul 6 09:43:36 2022 +0700
+
+    Merge branch 'master' into chinhnd
+
+[33mcommit cc640501f57d2d5301f175c0820c2fb1e5ed4b64[m
+Merge: a7aa4bf f8fa137
+Author: Xuân Phạm <94380878+xuanpti@users.noreply.github.com>
+Date:   Wed Jul 6 09:31:55 2022 +0700
+
+    Merge pull request #3 from xuanpti/ninhhn
+    
+    update
+
+[33mcommit b6852a2991286f8b9a6b908945d3006c367003d5[m
+Author: chinhnd <ducchinhhd94@gmail.com>
+Date:   Wed Jul 6 09:22:09 2022 +0700
+
+    update JobManagement
+
+[33mcommit f8fa137fd9bfdeff2e06435ba9a6fd450a2b09e9[m
+Author: nguyenhaininh <hulkhulk1245@gmai.com>
+Date:   Wed Jul 6 09:21:15 2022 +0700
+
+    update
+
+[33mcommit a7aa4bf1fc67c2ea417ab9c2596bd404d557e0b4[m
+Merge: a85c947 745d18b
+Author: Xuân Phạm <94380878+xuanpti@users.noreply.github.com>
+Date:   Tue Jul 5 14:35:10 2022 +0700
+
+    Merge pull request #2 from xuanpti/ninhhn
+    
+    update email
+
+[33mcommit 745d18b8a24134df75c5ade629e357a598378650[m
+Author: nguyenhaininh <hulkhulk1245@gmai.com>
+Date:   Tue Jul 5 14:33:39 2022 +0700
+
+    update email
+
+[33mcommit a85c947a328fd02d0fb6dab99668a1399498b497[m
+Author: XuanPTi <94380878+XuanPTi@users.noreply.github.com>
+Date:   Mon Jul 4 22:48:24 2022 +0700
+
+    fix base
+
+[33mcommit 4f69659669916ae7c9ca40c786f11927a9f6e409[m[33m ([m[1;31morigin/chinhndd[m[33m)[m
+Author: XuanPTi <94380878+XuanPTi@users.noreply.github.com>
+Date:   Fri Jul 1 17:59:00 2022 +0700
+
+    update base
+
+[33mcommit 580ba509eef7f062cb80df3a90f094462df1bf8a[m
+Author: kieumanhquan <71400690+kieumanhquan@users.noreply.github.com>
+Date:   Fri Jul 1 11:40:22 2022 +0700
+
+    update base

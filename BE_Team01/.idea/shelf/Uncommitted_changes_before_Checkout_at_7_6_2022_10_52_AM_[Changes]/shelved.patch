@@ -1,0 +1,274 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project version=\"4\">\r\n<component name=\"AutoImportSettings\">\r\n<option name=\"autoReloadType\" value=\"SELECTIVE\"/>\r\n</component>\r\n<component name=\"ChangeListManager\">\r\n<list default=\"true\" id=\"f3a9a751-07b9-4acc-9920-d4451441df1f\" name=\"Changes\" comment=\"\">\r\n<change beforePath=\"$PROJECT_DIR$/src/main/java/com/itsol/recruit/dto/JobDTO.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/itsol/recruit/dto/JobDTO.java\" afterDir=\"false\"/>\r\n<change beforePath=\"$PROJECT_DIR$/src/main/java/com/itsol/recruit/email/EmailService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/itsol/recruit/email/EmailService.java\" afterDir=\"false\"/>\r\n<change beforePath=\"$PROJECT_DIR$/src/main/java/com/itsol/recruit/service/mapper/JobMapper.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/itsol/recruit/service/mapper/JobMapper.java\" afterDir=\"false\"/>\r\n</list>\r\n<option name=\"SHOW_DIALOG\" value=\"false\"/>\r\n<option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\"/>\r\n<option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\"/>\r\n<option name=\"LAST_RESOLUTION\" value=\"IGNORE\"/>\r\n</component>\r\n<component name=\"FileTemplateManagerImpl\">\r\n<option name=\"RECENT_TEMPLATES\">\r\n<list>\r\n<option value=\"Interface\"/>\r\n<option value=\"Class\"/>\r\n</list>\r\n</option>\r\n</component>\r\n<component name=\"Git.Settings\">\r\n<option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\"/>\r\n</component>\r\n<component name=\"JpbToolWindowState\">\r\n<option name=\"myId2FirstActivated\">\r\n<map>\r\n<entry key=\"com.haulmont.jpb.jpaInspector\" value=\"true\"/>\r\n<entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\"/>\r\n<entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\"/>\r\n</map>\r\n</option>\r\n<option name=\"myId2Visible\">\r\n<map>\r\n<entry key=\"com.haulmont.jpb.jpaInspector\" value=\"false\"/>\r\n<entry key=\"com.haulmont.jpb.jpaPalette\" value=\"false\"/>\r\n<entry key=\"com.haulmont.jpb.jpaStructure\" value=\"false\"/>\r\n</map>\r\n</option>\r\n</component>\r\n<component name=\"MarkdownSettingsMigration\">\r\n<option name=\"stateVersion\" value=\"1\"/>\r\n</component>\r\n<component name=\"MavenImportPreferences\">\r\n<option name=\"generalSettings\">\r\n<MavenGeneralSettings>\r\n<option name=\"mavenHome\" value=\"Use Maven wrapper\"/>\r\n<option name=\"useMavenConfig\" value=\"true\"/>\r\n</MavenGeneralSettings>\r\n</option>\r\n</component>\r\n<component name=\"ProjectId\" id=\"27yHvxEwc2ybmhywKDEMk40JqLX\"/>\r\n<component name=\"ProjectViewState\">\r\n<option name=\"hideEmptyMiddlePackages\" value=\"true\"/>\r\n<option name=\"showLibraryContents\" value=\"true\"/>\r\n</component>\r\n<component name=\"PropertiesComponent\">\r\n<property name=\"DatabaseDriversLRU\" value=\"oracle\"/>\r\n<property name=\"JPA.DatabaseSchemaImportDialog\" value=\"a3617688-7e14-41b1-a87a-f5430c0b718c\"/>\r\n<property name=\"RequestMappingsPanelOrder0\" value=\"0\"/>\r\n<property name=\"RequestMappingsPanelOrder1\" value=\"1\"/>\r\n<property name=\"RequestMappingsPanelWidth0\" value=\"75\"/>\r\n<property name=\"RequestMappingsPanelWidth1\" value=\"75\"/>\r\n<property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\"/>\r\n<property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\"/>\r\n<property name=\"WebServerToolWindowFactoryState\" value=\"false\"/>\r\n<property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\"/>\r\n<property name=\"nodejs_package_manager_path\" value=\"npm\"/>\r\n</component>\r\n<component name=\"RecentsManager\">\r\n<key name=\"ImportMappingsDialog.RecentPackages\">\r\n<recent name=\"com.itsol.recruit.entity\"/>\r\n</key>\r\n</component>\r\n<component name=\"RunManager\">\r\n<configuration name=\"RecruitApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n<module name=\"recruit\"/>\r\n<option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.itsol.recruit.RecruitApplication\"/>\r\n<method v=\"2\">\r\n<option name=\"Make\" enabled=\"true\"/>\r\n</method>\r\n</configuration>\r\n</component>\r\n<component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\"/>\r\n<component name=\"TaskManager\">\r\n<task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n<changelist id=\"f3a9a751-07b9-4acc-9920-d4451441df1f\" name=\"Changes\" comment=\"\"/>\r\n<created>1650285642850</created>\r\n<option name=\"number\" value=\"Default\"/>\r\n<option name=\"presentableId\" value=\"Default\"/>\r\n<updated>1650285642850</updated>\r\n<workItem from=\"1650285644091\" duration=\"1546000\"/>\r\n<workItem from=\"1652068665698\" duration=\"10081000\"/>\r\n<workItem from=\"1652344711822\" duration=\"3028000\"/>\r\n<workItem from=\"1652752734715\" duration=\"5898000\"/>\r\n<workItem from=\"1653270878576\" duration=\"578000\"/>\r\n<workItem from=\"1655191687850\" duration=\"1181000\"/>\r\n<workItem from=\"1656645259528\" duration=\"1428000\"/>\r\n<workItem from=\"1656749350171\" duration=\"8391000\"/>\r\n</task>\r\n<servers/>\r\n</component>\r\n<component name=\"TypeScriptGeneratedFilesManager\">\r\n<option name=\"version\" value=\"3\"/>\r\n</component>\r\n<component name=\"Vcs.Log.Tabs.Properties\">\r\n<option name=\"TAB_STATES\">\r\n<map>\r\n<entry key=\"MAIN\">\r\n<value>\r\n<State/>\r\n</value>\r\n</entry>\r\n</map>\r\n</option>\r\n</component>\r\n<component name=\"XDebuggerManager\">\r\n<watches-manager>\r\n<configuration name=\"SpringBootApplicationConfigurationType\">\r\n<watch expression=\"userSearchVM.pageNumber\"/>\r\n</configuration>\r\n</watches-manager>\r\n</component>\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,126 +1,137 @@
++<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-<component name="AutoImportSettings">
+-<option name="autoReloadType" value="SELECTIVE"/>
+-</component>
+-<component name="ChangeListManager">
+-<list default="true" id="f3a9a751-07b9-4acc-9920-d4451441df1f" name="Changes" comment="">
+-<change beforePath="$PROJECT_DIR$/src/main/java/com/itsol/recruit/dto/JobDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itsol/recruit/dto/JobDTO.java" afterDir="false"/>
+-<change beforePath="$PROJECT_DIR$/src/main/java/com/itsol/recruit/email/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itsol/recruit/email/EmailService.java" afterDir="false"/>
+-<change beforePath="$PROJECT_DIR$/src/main/java/com/itsol/recruit/service/mapper/JobMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itsol/recruit/service/mapper/JobMapper.java" afterDir="false"/>
+-</list>
+-<option name="SHOW_DIALOG" value="false"/>
+-<option name="HIGHLIGHT_CONFLICTS" value="true"/>
+-<option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false"/>
+-<option name="LAST_RESOLUTION" value="IGNORE"/>
+-</component>
+-<component name="FileTemplateManagerImpl">
+-<option name="RECENT_TEMPLATES">
+-<list>
+-<option value="Interface"/>
+-<option value="Class"/>
+-</list>
+-</option>
+-</component>
+-<component name="Git.Settings">
+-<option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$"/>
+-</component>
+-<component name="JpbToolWindowState">
+-<option name="myId2FirstActivated">
+-<map>
+-<entry key="com.haulmont.jpb.jpaInspector" value="true"/>
+-<entry key="com.haulmont.jpb.jpaPalette" value="true"/>
+-<entry key="com.haulmont.jpb.jpaStructure" value="true"/>
+-</map>
+-</option>
+-<option name="myId2Visible">
+-<map>
+-<entry key="com.haulmont.jpb.jpaInspector" value="false"/>
+-<entry key="com.haulmont.jpb.jpaPalette" value="false"/>
+-<entry key="com.haulmont.jpb.jpaStructure" value="false"/>
+-</map>
+-</option>
+-</component>
+-<component name="MarkdownSettingsMigration">
+-<option name="stateVersion" value="1"/>
+-</component>
+-<component name="MavenImportPreferences">
+-<option name="generalSettings">
+-<MavenGeneralSettings>
+-<option name="mavenHome" value="Use Maven wrapper"/>
+-<option name="useMavenConfig" value="true"/>
+-</MavenGeneralSettings>
+-</option>
+-</component>
+-<component name="ProjectId" id="27yHvxEwc2ybmhywKDEMk40JqLX"/>
+-<component name="ProjectViewState">
+-<option name="hideEmptyMiddlePackages" value="true"/>
+-<option name="showLibraryContents" value="true"/>
+-</component>
+-<component name="PropertiesComponent">
+-<property name="DatabaseDriversLRU" value="oracle"/>
+-<property name="JPA.DatabaseSchemaImportDialog" value="a3617688-7e14-41b1-a87a-f5430c0b718c"/>
+-<property name="RequestMappingsPanelOrder0" value="0"/>
+-<property name="RequestMappingsPanelOrder1" value="1"/>
+-<property name="RequestMappingsPanelWidth0" value="75"/>
+-<property name="RequestMappingsPanelWidth1" value="75"/>
+-<property name="RunOnceActivity.OpenProjectViewOnStart" value="true"/>
+-<property name="RunOnceActivity.ShowReadmeOnStart" value="true"/>
+-<property name="WebServerToolWindowFactoryState" value="false"/>
+-<property name="last_opened_file_path" value="$PROJECT_DIR$"/>
+-<property name="nodejs_package_manager_path" value="npm"/>
+-</component>
+-<component name="RecentsManager">
+-<key name="ImportMappingsDialog.RecentPackages">
+-<recent name="com.itsol.recruit.entity"/>
+-</key>
+-</component>
+-<component name="RunManager">
+-<configuration name="RecruitApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+-<module name="recruit"/>
+-<option name="SPRING_BOOT_MAIN_CLASS" value="com.itsol.recruit.RecruitApplication"/>
+-<method v="2">
+-<option name="Make" enabled="true"/>
+-</method>
+-</configuration>
+-</component>
+-<component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true"/>
+-<component name="TaskManager">
+-<task active="true" id="Default" summary="Default task">
+-<changelist id="f3a9a751-07b9-4acc-9920-d4451441df1f" name="Changes" comment=""/>
+-<created>1650285642850</created>
+-<option name="number" value="Default"/>
+-<option name="presentableId" value="Default"/>
+-<updated>1650285642850</updated>
+-<workItem from="1650285644091" duration="1546000"/>
+-<workItem from="1652068665698" duration="10081000"/>
+-<workItem from="1652344711822" duration="3028000"/>
+-<workItem from="1652752734715" duration="5898000"/>
+-<workItem from="1653270878576" duration="578000"/>
+-<workItem from="1655191687850" duration="1181000"/>
+-<workItem from="1656645259528" duration="1428000"/>
+-<workItem from="1656749350171" duration="8391000"/>
+-</task>
+-<servers/>
+-</component>
+-<component name="TypeScriptGeneratedFilesManager">
+-<option name="version" value="3"/>
+-</component>
+-<component name="Vcs.Log.Tabs.Properties">
+-<option name="TAB_STATES">
+-<map>
+-<entry key="MAIN">
+-<value>
+-<State/>
+-</value>
+-</entry>
+-</map>
+-</option>
+-</component>
+-<component name="XDebuggerManager">
+-<watches-manager>
+-<configuration name="SpringBootApplicationConfigurationType">
+-<watch expression="userSearchVM.pageNumber"/>
+-</configuration>
+-</watches-manager>
+-</component>
+-</project>
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="f3a9a751-07b9-4acc-9920-d4451441df1f" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/itsol/recruit/dto/JobDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itsol/recruit/dto/JobDTO.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/itsol/recruit/email/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itsol/recruit/email/EmailService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/itsol/recruit/service/mapper/JobMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itsol/recruit/service/mapper/JobMapper.java" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Interface" />
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="JpbToolWindowState">
++    <option name="myId2FirstActivated">
++      <map>
++        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
++        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
++        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
++      </map>
++    </option>
++    <option name="myId2Visible">
++      <map>
++        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
++        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
++        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
++      </map>
++    </option>
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
++  <component name="MavenImportPreferences">
++    <option name="generalSettings">
++      <MavenGeneralSettings>
++        <option name="mavenHome" value="Use Maven wrapper" />
++        <option name="useMavenConfig" value="true" />
++      </MavenGeneralSettings>
++    </option>
++  </component>
++  <component name="ProjectId" id="27yHvxEwc2ybmhywKDEMk40JqLX" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">
++    <property name="DatabaseDriversLRU" value="oracle" />
++    <property name="JPA.DatabaseSchemaImportDialog" value="a3617688-7e14-41b1-a87a-f5430c0b718c" />
++    <property name="RequestMappingsPanelOrder0" value="0" />
++    <property name="RequestMappingsPanelOrder1" value="1" />
++    <property name="RequestMappingsPanelWidth0" value="75" />
++    <property name="RequestMappingsPanelWidth1" value="75" />
++    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
++    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
++    <property name="WebServerToolWindowFactoryState" value="false" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
++    <property name="nodejs_package_manager_path" value="npm" />
++  </component>
++  <component name="RecentsManager">
++    <key name="ImportMappingsDialog.RecentPackages">
++      <recent name="com.itsol.recruit.entity" />
++    </key>
++  </component>
++  <component name="RunManager" selected="Spring Boot.RecruitApplication">
++    <configuration name="RecruitApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
++      <module name="BE_Team01" />
++      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itsol.recruit.RecruitApplication" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="RecruitApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
++      <option name="ACTIVE_PROFILES" />
++      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
++      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
++      <module name="BE_Team01" />
++      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itsol.recruit.RecruitApplication" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="f3a9a751-07b9-4acc-9920-d4451441df1f" name="Changes" comment="" />
++      <created>1650285642850</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1650285642850</updated>
++      <workItem from="1650285644091" duration="1546000" />
++      <workItem from="1652068665698" duration="10081000" />
++      <workItem from="1652344711822" duration="3028000" />
++      <workItem from="1652752734715" duration="5898000" />
++      <workItem from="1653270878576" duration="578000" />
++      <workItem from="1655191687850" duration="1181000" />
++      <workItem from="1656645259528" duration="1428000" />
++      <workItem from="1656749350171" duration="8391000" />
++    </task>
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="XDebuggerManager">
++    <watches-manager>
++      <configuration name="SpringBootApplicationConfigurationType">
++        <watch expression="userSearchVM.pageNumber" />
++      </configuration>
++    </watches-manager>
++  </component>
++</project>
+\ No newline at end of file

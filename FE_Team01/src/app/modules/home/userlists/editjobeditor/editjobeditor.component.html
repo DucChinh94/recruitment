@@ -1,0 +1,90 @@
+<div class="example-label"><b style="
+    top: -8px;
+position: relative;
+left: 192px;">Cập nhật thông tin nhân viên</b>
+    <form [formGroup]="formUpdate" class="example-form">
+        <div class="onaline">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <div *ngIf="f.userName.errors">
+                    <div *ngIf="f.userName.errors.required"><small class="text-danger">*Không được bỏ trống</small>
+                    </div>
+                </div>
+                <div *ngIf="messages === 'Username đã tồn tại'">
+                    <small class="text-danger">*{{messages}}</small>
+                </div>
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Ex. username" formControlName="userName" type="text"
+                    [(ngModel)]="user.userName">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <div>
+                    <div *ngIf=" f.email.invalid && (f.email.dirty || f.email.touched)">
+                        <div *ngIf="f.email.errors">
+                            <div *ngIf="f.email.errors.required">
+                                <small class="text-danger">*Không được bỏ trống</small>
+                            </div>
+                            <div *ngIf="f.email.errors.email">
+                                <small class="text-danger">*Sai định dạng</small>
+                            </div>
+                            <div *ngIf="messages === 'Email đã tồn tại'">
+                                <small class="text-danger">*{{messages}}</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Ex. 1123@mail.com" formControlName="email" type="text"
+                    [(ngModel)]="user.email">
+            </mat-form-field>
+
+        </div>
+        <div class="onaline">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <div *ngIf=" f.phoneNumber.invalid && (f.phoneNumber.dirty || f.phoneNumber.touched)">
+                    <div *ngIf="f.phoneNumber.errors.pattern">
+                        <small class="text-danger">*Sai định dạng số điện thoại</small>
+                    </div>
+                </div>
+                <div *ngIf="messages === 'Phone đã tồn tại'">
+                    <small class="text-danger">*{{messages}}</small>
+                </div>
+                <mat-label>Số điện thoại</mat-label>
+                <input matInput placeholder="Ex. 01213245534(không bắt buộc)" formControlName="phoneNumber" type="text"
+                    [(ngModel)]="user.phoneNumber">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>ngày sinh</mat-label>
+                <input matInput placeholder="Ex. 13/05/2001" formControlName="birthDay" type="date"
+                    [(ngModel)]="birthDay" (change)="getbirthday($event)">
+            </mat-form-field>
+        </div>
+        <div class="onaline">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Giới tính</mat-label>
+                <select matNativeControl required formControlName="gender" [(ngModel)]="user.gender">
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                    <option value="Khác">Khác</option>
+                </select>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Họ và tên</mat-label>
+                <input matInput placeholder="Ex. Nguyễn Văn A" formControlName="name" type="text"
+                    [(ngModel)]="user.name">
+            </mat-form-field>
+        </div>
+
+
+        <div class="example-button-row">
+            <button mat-stroked-button color="warn" [disabled]="!formUpdate.valid || this.checkkk !== true"
+                (click)='addJEConfirm($event)'>Cập
+                nhật</button>
+        </div>
+        <div class="example-button-row">
+            <button mat-raised-button mat-dialog-close (click)='cancelAction($event)'>Hủy</button>
+        </div>
+    </form>
+
+</div>

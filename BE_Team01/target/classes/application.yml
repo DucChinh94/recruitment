@@ -1,0 +1,36 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: team01
+    password: 123456
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: hulkhulk1245@gmail.com
+    password: epiqsepylqtdauca
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.OracleDialect
+
+application:
+  security:
+    jwt:
+      secretKey: de6aaeabadeccc598160172044da9c566242ae3b
+      tokenValidityMilliseconds: 86400000
+      rememberMeTokenValiditySeconds: 25920000000
+
+

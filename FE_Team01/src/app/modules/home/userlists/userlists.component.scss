@@ -1,0 +1,52 @@
+table {
+    width: 100%;
+}
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+}
+
+.example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 800px;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    padding: 0 10px 0 10px;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    top: 76px;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.fix-layout-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
